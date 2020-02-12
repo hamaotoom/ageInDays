@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>age In Days</title>
+<style>
+button{
+background:#0f0;
+border: double 2px #ff0;
+outline:none
+}
+#pl{
+position:absolute;
+left:30px;
+background:#0f0;
+font-size:19px;
+color:blue;
+top:50.6px;
+
+}
+input{
+border:none;
+border-bottom: solid 2px #0f0;
+border-left: solid 2px #0f0;
+outline:none;
+font-family:serif;
+width:30px;
+
+}
+#test:focus{
+width:185px;
+transition:1s;
+}
+#test:hover ~ #testt #pl{
+margin-left:156px;
+transition:1.4s;
+}
+mark{
+border: solid 2px #0f0
+}
+#his{
+margin-right:80%
+}
+/*#his{
+border: solid 2px #0f0
+}*/
+</style>
+</head>
+</head>
+<body>
+<p><mark>your Age In Days</mark></p>
+<input type="number" id="test"><a id="testt" onclick="ooo()" href="#"><span id="pl">X</span></a>
+<button onclick="send()">finish</button>
+<p id="his"></p>
+<script>
+function send(){
+"use strict";
+var aind=document.getElementById('test').value;
+var a = document.getElementById('his').innerHTML;/* = "your Age= " + aind * 365  + " Days";*/
+var k = "-";
+if(aind > 120){
+document.getElementById('his').innerHTML ="please Write Correct Age!";
+document.getElementById('his').style.border="double 2px #0f0";
+document.getElementById('his').style.color="red"
+}
+else if (aind == "" ){
+document.getElementById('his').innerHTML = "please Write Number ";
+document.getElementById('his').style.border="double 2px #0f0"
+}else{
+document.getElementById('his').innerHTML = "your Age= " + aind * 365  + " Days";
+document.getElementById('his').style.border="double 2px #0f0"
+}
+};
+function ooo(){
+var la = document.getElementById('test').value;
+document.getElementById('test').value = "";
+/*document.getElementById('test').style.border="solid 2px #0f0"*/
+}
+
+</script>
+</body>
+</html>
